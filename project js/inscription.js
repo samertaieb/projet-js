@@ -21,5 +21,9 @@ function inscription(){
          console.log(user);
     users.push(user);
     localStorage.setItem("users",JSON.stringify(users));
+<<<<<<< HEAD
+    window.location.replace("logIn.html")
+=======
+>>>>>>> 1a03946af3837d00f2191860aeed8e1296f4de3e
 
 }  

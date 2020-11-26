@@ -91,7 +91,7 @@ form p {
 .inputs-w3ls:nth-child(1),.inputs-w3ls:nth-child(3){
 	margin-right: 18px;
 }
-.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
     outline: none;
     font-size: 15px;
     color: #0e0e0e;
@@ -302,7 +302,7 @@ input.checkbox:checked:after {
 		font-size: 44px;
 		margin: 42px 0;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		margin-bottom: 20px;
 		padding: 10px 10px;
 	}
@@ -367,7 +367,7 @@ input.checkbox:checked:after {
 	}
 }
 @media(max-width:991px){
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		font-size: 14px;
 	}
 	.right-map-w3-agile input[type="text"], .right-map-w3-agile input[type="password"], .right-map-w3-agile input[type="email"] {
@@ -407,7 +407,7 @@ input.checkbox:checked:after {
 	.right-map-w3-agile, .left-form-w3-agile {
 		padding: 0px 30.2px;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		width: 92%;
 	}
 	.right-map-w3-agile {
@@ -458,7 +458,7 @@ input.checkbox:checked:after {
 		padding: 8px 10px;
 		width: 93.4%;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		margin-bottom: 15px;
 		padding: 8px 10px;
 		width: 93%;
@@ -477,7 +477,7 @@ input.checkbox:checked:after {
 	.main-agileits {
 		width: 89%;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		width: 92.7%;
 	}
 	.right-map-w3-agile input[type="text"], .right-map-w3-agile input[type="password"], .right-map-w3-agile input[type="email"] {
@@ -518,7 +518,7 @@ input.checkbox:checked:after {
 	.right-map-w3-agile input[type="text"], .right-map-w3-agile input[type="password"], .right-map-w3-agile input[type="email"] {
 		width: 92.6%;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		width: 92.5%;
 	}
 	.left-form-w3-agile h2, .right-map-w3-agile h2 {
@@ -538,7 +538,7 @@ input.checkbox:checked:after {
 	.right-map-w3-agile, .left-form-w3-agile {
 		padding: 0px 28px;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		width: 91.6%;
 	}
 	.right-map-w3-agile input[type="text"], .right-map-w3-agile input[type="password"], .right-map-w3-agile input[type="email"] {
@@ -574,7 +574,7 @@ input.checkbox:checked:after {
 	input[type="submit"] {
 		float: none;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		width: 93.8%;
 		margin-bottom: 10px;
 	}
@@ -617,7 +617,7 @@ input.checkbox:checked:after {
 }
 
 @media(max-width:568px){
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		width: 93.5%;
 	}
 	.right-map-w3-agile input[type="text"], .right-map-w3-agile input[type="password"], .right-map-w3-agile input[type="email"] {
@@ -673,7 +673,7 @@ input.checkbox:checked:after {
 	.left-form-w3-agile h2, .right-map-w3-agile h2 {
 		font-size: 16px;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		font-size: 13.5px;
 	}
 }
@@ -691,7 +691,7 @@ input.checkbox:checked:after {
 		letter-spacing: 5px;
 		margin: 25px 0;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		width: 92.6%;
 	}
 	.right-map-w3-agile input[type="text"], .right-map-w3-agile input[type="password"], .right-map-w3-agile input[type="email"] {
@@ -719,7 +719,7 @@ input.checkbox:checked:after {
 	.main-agileits {
 		width: 68%;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		width: 92.06%;
 	}
 	.right-map-w3-agile input[type="text"], .right-map-w3-agile input[type="password"], .right-map-w3-agile input[type="email"] {
@@ -756,7 +756,7 @@ input.checkbox:checked:after {
 	.wthree-text ul li:nth-child(1) {
 		margin-right: 14px;
 	}
-	.left-form-w3-agile input[type="email"],.left-form-w3-agile input[type="text"],.left-form-w3-agile input[type="tel"], .left-form-w3-agile input[type="password"] {
+	.left-form-w3-agile input[type="email"], .left-form-w3-agile input[type="password"] {
 		width: 91.2%;
 	}
 	.right-map-w3-agile input[type="text"], .right-map-w3-agile input[type="password"], .right-map-w3-agile input[type="email"] {
