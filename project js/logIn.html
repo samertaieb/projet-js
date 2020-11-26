@@ -20,7 +20,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- web font -->
 	<link href='//fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-	<script src="logIn.js"></script>
+	<script src="logIn.js" defer></script>
 	<!-- //web font -->
 </head>
 
@@ -47,8 +47,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</ul>
 					<div class="clear"> </div>
 				</div>
-				<button type="submit" value="Connexion" id="submit-cnx" onclick="seConnecter()">Se Connecter</button>
-					<button type="submit" value="S'inscrire" id="submit-inscription">S'inscrire</button>
+				<button type="button" value="Connexion" id="submit-cnx" onclick="seConnecter()">Se Connecter</button>
+					<button type="button" value="S'inscrire" id="submit-inscription" onclick="toSignUp()">S'inscrire</button>
 			</form>
 		</div>
 		<!--//form-ends-here-->
