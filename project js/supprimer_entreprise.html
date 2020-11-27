@@ -33,56 +33,70 @@
                 <tr>
                     <th class="border-top-0">Nom établissement</th>
                     <th class="border-top-0">Adresse</th>
-                    <th class="border-top-0">téléphone</th>
-                    <th class="border-top-0">email</th>
+                    <th class="border-top-0">Téléphone</th>
+                    <th class="border-top-0">Email</th>
+                    <th class="border-top-0">Editer</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
 
-                    <td class="txt-oflo">Elite admin</td>
-                    <td><span class="label label-success label-rounded">SALE</span> </td>
-                    <td class="txt-oflo">April 18, 2017</td>
-                    <td><span class="font-medium"></span></td>
+                    <td class="txt-oflo" name="name">Elite admin</td>
+                    <td name="adresse"><span class="label label-success label-rounded">SALE</span> </td>
+                    <td class="txt-oflo" name ="telephone">April 18, 2017</td>
+                    <td name="email"><span class="font-medium"></span></td>
+                    <td><button>Modifier</button></td>
+                    <td><button class="supp" onclick="supprimer()">Supprimer</button></td>
                 </tr>
                 <tr>
 
-                    <td class="txt-oflo">Real Homes WP Theme</td>
+                    <td class="txt-oflo" name="name">Real Homes WP Theme</td>
                     <td><span class="label label-info label-rounded">EXTENDED</span></td>
                     <td class="txt-oflo">April 19, 2017</td>
                     <td><span class="font-medium">$1250</span></td>
+                    <td><button>Modifier</button></td>
+                    <td><button class="supp"onclick="supprimer()">Supprimer</button></td>
                 </tr>
                 <tr>
 
-                    <td class="txt-oflo">Ample Admin</td>
+                    <td class="txt-oflo" name="name">Ample Admin</td>
                     <td><span class="label label-purple label-rounded">Tax</span></td>
                     <td class="txt-oflo">April 19, 2017</td>
                     <td><span class="font-medium">$1250</span></td>
+                    <td><button>Modifier</button></td>
+                    <td><button class="supp"onclick="supprimer()">Supprimer</button></td>
                 </tr>
                 <tr>
 
-                    <td class="txt-oflo">Medical Pro WP Theme</td>
+                    <td class="txt-oflo" name="name">Medical Pro WP Theme</td>
                     <td><span class="label label-success label-rounded">Sale</span></td>
                     <td class="txt-oflo">April 20, 2017</td>
                     <td><span class="font-medium">-$24</span></td>
+                    <td><button>Modifier</button></td>
+                    <td><button class="supp"onclick="supprimer()">Supprimer</button></td>
                 </tr>
                 <tr>
 
-                    <td class="txt-oflo">Hosting press html</td>
+                    <td class="txt-oflo" name="name">Hosting press html</td>
                     <td><span class="label label-success label-rounded">SALE</span></td>
                     <td class="txt-oflo">April 21, 2017</td>
                     <td><span class="font-medium">$24</span></td>
+                    <td><button>Modifier</button></td>
+                    <td><button class="supp"onclick="supprimer()">Supprimer</button></td>
                 </tr>
                 <tr>
 
-                    <td class="txt-oflo">Digital Agency PSD</td>
+                    <td class="txt-oflo" name="name">Digital Agency PSD</td>
                     <td><span class="label label-danger label-rounded">Tax</span> </td>
                     <td class="txt-oflo">April 23, 2017</td>
                     <td><span class="font-medium">-$14</span></td>
+                    <td><button>Modifier</button></td>
+                    <td><button class="supp"onclick="supprimer()">Supprimer</button></td>
                 </tr>
             </tbody>
         </table>
-        <button type="button" class="btn btn-danger" id="supprimer">Supprimer</button>    
     </div>
+    <ul id="ul"></ul>
+    <script src="./supprimer_entreprise.js"></script>
 </body>
 </html>

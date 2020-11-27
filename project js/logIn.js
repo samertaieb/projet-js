@@ -16,4 +16,3 @@ function seConnecter(){
         alert("remplissez tous les champs")
     }
 }
-fu
