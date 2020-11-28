@@ -197,6 +197,44 @@
     <!-- ============================================================== -->
     <!-- End Wrapper -->
    
+    <div class="card" style="width: 50rem;" id="formCandidat">
+        <form>
+                <h1 id="titre_page_candidats">Ajout d'un nouveau candidat :</h1>
+            <br>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Nom du candidats</span>
+                </div>
+                <input type="text" id="nom_candidat" class="form-control" placeholder="Nom" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div><br><br>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Prenom du candidats</span>
+                </div>
+                <input type="text" id="prenom_candidat" class="form-control" placeholder="Prenom" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div><br><br>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Email du candidats</span>
+                </div>
+                <input type="email" id="email_candidat" class="form-control" placeholder="Exemple@Exemple.com"
+                    aria-label="Username" aria-describedby="basic-addon1">
+            </div><br><br>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">N° telephone</span>
+                </div>
+                <input type="number" id="numero_candidat" class="form-control" placeholder="+216******"
+                    aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <center><button type="button" onclick="ajout_candidats()" id="ajouter_candidat"
+                    class="btn btn-success">Ajouter</button></center>
+        </form>
+    </div>
+    
      <!-- ============================================================== -->
     <!-- ============================================================== -->
     <!-- All Jquery -->
