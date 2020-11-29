@@ -21,3 +21,8 @@
   margin-right: auto;
   margin-top: auto;
 }
+#liste_candidats {
+  width: 70%;
+
+  border-width: 3%;
+}
