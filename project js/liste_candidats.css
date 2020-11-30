@@ -1,0 +1,34 @@
+#formCandidat {
+  width: 50% !important;
+  border: 30px;
+  /* margin: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto; */
+}
+.input-group-text {
+  width: 200px;
+}
+#liste_candidats {
+  margin: auto;
+  width: 800px;
+  margin-top: auto;
+  margin-left: 25% !important;
+  margin-right: auto;
+}
+#titre_page_candidats {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+#liste_candidats {
+  width: 70% !important;
+
+  border-width: 3%;
+}
+#newNomCandidat {
+  width: 40% !important;
+}
+#formInput {
+  width: 90% !important;
+}
