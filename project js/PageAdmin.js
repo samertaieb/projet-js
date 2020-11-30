@@ -117,22 +117,13 @@ update.addEventListener("click", () => {
   MSG.color = "green";
 });
 
-// function modificationCandidats() {
-//   const modifiedCandidats = {
-//     nom_candidat: newNomCandidat.value,
-//     prenom_candidat: newPrenomCandidat.value,
-//     email_candidat: newEmailCandidat.value,
-//     numero_candidat: newNumeroCandidat.value,
-//     id: idCandidat,
-//   };
-//   localStorage.setItem("candidats", JSON.stringify(modifiedCandidats));
-//   const newCandidat = candidats.map(candidat => {
-//     if (candidat.id === id.modifiedCandidats) {
-//       candidat = modifiedCandidats;
-//     }
-//     return candidat;
-//   });
-//   localStorage.setItem("newCandidat", JSON.stringify(newCandidat));
-//   alert((MSG = "Vous avez modifier vos données avec succées"));
-//   MSG.color = "green";
-// }
+function LOGOUT() {
+  localStorage.removeItem("user");
+  window.location.replace("logIn.html");
+}
+
+function bonjourUtilisateur() {
+  const user = JSON.parse(localStorage.getItem("user"));
+  document.getElementById("BJ").innerHTML =
+    "BIENVENUE CHEZ NOUS " + user.nomEtablissament;
+}

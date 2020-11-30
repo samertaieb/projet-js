@@ -1,3 +1,6 @@
+body {
+  background-image: url(Page_admin.jpg);
+}
 #formCandidat {
   width: 800px;
   border: 30px;
@@ -10,19 +13,36 @@
   width: 200px;
 }
 #liste_candidats {
-  margin: auto;
   width: 800px;
-  margin-top: auto;
   margin-left: auto;
   margin-right: auto;
+  display: block;
 }
 #titre_page_candidats {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
 }
-#liste_candidats {
-  width: 70%;
 
-  border-width: 3%;
+#logOut {
+  position: fixed;
+  top: 8px;
+  right: 16px;
+}
+#BJ {
+  font-size: 30px;
+  text-align: center;
+  color: darkblue;
+  text-decoration: solid;
+}
+#Pgraph {
+  text-align: center;
+  color: rgb(142, 142, 228);
+  font-size: 20px;
+}
+
+#graph {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

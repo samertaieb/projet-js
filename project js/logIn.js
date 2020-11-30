@@ -8,9 +8,13 @@ function seConnecter() {
       element => element.email == email && element.password == password
     );
     if (user != undefined) {
-      localStorage.setItem("user", JSON.stringify(user));
-      // window.location.replace("PageAdmin.html");
-      window.location.href = "./PageAdmin.html";
+      if (email == "superAdmin@super.com") {
+        window.location.href = "page_super_admin.html";
+        localStorage.setItem("user", JSON.stringify(user));
+      } else {
+        window.location.href = "PageAdmin.html";
+        localStorage.setItem("user", JSON.stringify(user));
+      }
     } else alert("email or password invalid! try again or sign up");
   } else alert("remplissez tous les champs!");
 }
