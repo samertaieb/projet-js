@@ -113,8 +113,9 @@ update.addEventListener("click", () => {
   });
   console.log(newCandidat);
   localStorage.setItem("tableau_candidats", JSON.stringify(newCandidat));
-  alert((MSG = "Vous avez modifier vos données avec succées"));
-  MSG.color = "green";
+  // alert((MSG = "Vous avez modifier vos données avec succées"));
+
+  location.reload();
 });
 
 function LOGOUT() {
