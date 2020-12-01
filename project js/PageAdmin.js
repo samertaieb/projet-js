@@ -43,8 +43,8 @@ function liste_candidats() {
     <th scope="col">${candidatObj.email}</th>
     <th scope="col">${candidatObj.numero}</th>
    <th scope="col">
-   <button type="button" class="btn btn-warning">Modifier</button>
-   <button  type="button" class="btn btn-danger delete">Supprimer</button>
+   <a href="Modification_candidats.html"><button type="button" class="btn btn-warning modifier">Modifier</button></a>
+   <button type="button" class="btn btn-danger delete">Supprimer</button>
    </th>
 </tr>`;
   });
@@ -54,9 +54,19 @@ tbody.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.parentElement.remove();
     const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
-    const filteredCandisdats = candidats.filter(
+    const filteredCandidats = candidats.filter(
       (candidatObj) => candidatObj.id != e.target.parentElement.parentElement.id
     );
-    localStorage.setItem("tableau_candidats", JSON.stringify(filteredCandisdats));
+    localStorage.setItem("tableau_candidats", JSON.stringify(filteredCandidats));
   }
 });
+
+function LOGOUT() {
+  localStorage.removeItem("user");
+  window.location.replace("logIn.html");
+}
+
+function bonjourUtilisateur() {
+  const user = JSON.parse(localStorage.getItem("user"));
+  document.getElementById("BJ").innerHTML = "BIENVENUE CHEZ NOUS " + user.nomEtablissament;
+}
