@@ -8,7 +8,7 @@ users.forEach((user) => {
   console.log(user.file);
     tbody.innerHTML+=` 
     <tr id="${user.id}">
-    <th class="border-top-0">${user.file}</th>
+    <th class="border-top-0"><img src=${user.file}></th>
     <th class="border-top-0">${user.nomEtablissament}</th>
     <th class="border-top-0">${user.adresse}</th>
     <th class="border-top-0">${user.tel}</th>
