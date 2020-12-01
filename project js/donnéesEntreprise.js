@@ -27,11 +27,13 @@ function modificationDonnées() {
     id: user.id,
   };
   localStorage.setItem("user", JSON.stringify(modifiedObj));
-  const newUsers = users.map(entrep => {
-    if (entrep.id === user.id) {
-      entrep = modifiedObj;
+  const newUser = users.map(entreprise => {
+    if (entreprise.id === user.id) {
+      entreprise = modifiedObj;
     }
-    return entrep;
+    return entreprise;
   });
-  localStorage.setItem("users", JSON.stringify(newUsers));
+  localStorage.setItem("newuser", JSON.stringify(newUser));
+  alert((MSG = "Vous avez modifier vos données avec succées"));
+  MSG.color = "green";
 }
