@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="stylesheet" href="PageAdmin.css" />
+    <link rel="stylesheet" href="donnéesEntreprise.css" />
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -16,7 +16,7 @@
       content="Nice Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Page Admin</title>
+    <title>Page d'acceuil</title>
     <link
       rel="canonical"
       href="https://www.wrappixel.com/templates/niceadmin-lite/"
@@ -43,12 +43,7 @@
     <![endif]-->
   </head>
 
-  <body onload="liste_candidats()">
-    <!-- <style>
-        body{
-            background-image: url("Page_admin.jpg");
-        }
-    </style> -->
+  <body>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -193,18 +188,16 @@
             <ul id="sidebarnav">
               <li class="sidebar-item">
                 <a
-                  href="Ajout_candidat.html"
                   class="sidebar-link waves-effect waves-dark sidebar-link"
                   href=""
                   aria-expanded="false"
                 >
                   <i class="mdi mdi-account-network"></i>
-                  <span class="hide-menu">Ajouter un candidat</span>
+                  <span class="hide-menu">Ajout d'un candidat</span>
                 </a>
               </li>
               <li class="sidebar-item">
                 <a
-                  href="Liste_candidats.html"
                   class="sidebar-link waves-effect waves-dark sidebar-link"
                   href=""
                   aria-expanded="false"
@@ -232,80 +225,107 @@
       </aside>
       <div class="card" style="width: 50rem" id="formCandidat">
         <form>
-          <center><h1>Ajout d'un nouveau candidat :</h1></center>
+          <center><h1>Modification des données de l'entreprise :</h1></center>
           <br />
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"
-                >Nom du candidats</span
+                >Nom de votre entreprise</span
               >
             </div>
             <input
               type="text"
-              id="nom_candidat"
+              id="newNomEntreprise"
               class="form-control"
-              placeholder="Nom"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
+              placeholder="Nom de l'entreprise"
             />
           </div>
           <br /><br />
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"
-                >Prenom du candidats</span
+                >Votre adresse</span
               >
             </div>
             <input
               type="text"
-              id="prenom_candidat"
+              id="newAdresse"
               class="form-control"
-              placeholder="Prenom"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
+              placeholder="Adresse"
             />
           </div>
           <br /><br />
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
-                >Email du candidats</span
-              >
+              <span class="input-group-text" id="basic-addon1">tel</span>
             </div>
             <input
               type="email"
-              id="email_candidat"
+              id="newTelEntreprise"
+              class="form-control"
+              placeholder="+216******"
+            />
+          </div>
+          <br /><br />
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">fax</span>
+            </div>
+            <input
+              type="number"
+              id="newFaxEntreprise"
+              class="form-control"
+              placeholder="+216******"
+            />
+          </div>
+          <br /><br />
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">email</span>
+            </div>
+            <input
+              type="email"
+              id="newEmailEntreprise"
               class="form-control"
               placeholder="Exemple@Exemple.com"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
             />
           </div>
           <br /><br />
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"
-                >N° telephone</span
+                >Mot de passe</span
               >
             </div>
             <input
-              type="number"
-              id="numero_candidat"
+              type="password"
+              id="newPassword"
               class="form-control"
-              placeholder="+216******"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
+              placeholder="Votre mot de passe"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"
+                >confirmer le mot de passe
+              </span>
+            </div>
+            <input
+              type="password"
+              id="newPasswordConfirmed"
+              class="form-control"
+              placeholder="confirmer votre mot de passe"
             />
           </div>
           <center>
             <button
               type="button"
-              onclick="ajout_candidats()"
+              onclick=" modificationDonnées()"
               id="ajouter_candidat"
               class="btn btn-success"
             >
-              Ajouter
+              Modifier
             </button>
           </center>
         </form>
@@ -337,7 +357,6 @@
 
     <!-- ============================================================== -->
     <!-- End Wrapper -->
-
     <!-- ============================================================== -->
     <!-- ============================================================== -->
     <!-- All Jquery -->
@@ -359,7 +378,6 @@
     <script src="../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../dist/js/pages/dashboards/dashboard1.js"></script>
-
-    <script src="PageAdmin.js"></script>
+    <script src="donnéesEntreprise.js"></script>
   </body>
 </html>

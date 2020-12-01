@@ -16,7 +16,7 @@
       content="Nice Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Page Admin</title>
+    <title>Page Super Admin</title>
     <link
       rel="canonical"
       href="https://www.wrappixel.com/templates/niceadmin-lite/"
@@ -43,7 +43,7 @@
     <![endif]-->
   </head>
 
-  <body onload="liste_candidats()">
+  <body >
     <!-- <style>
         body{
             background-image: url("Page_admin.jpg");
@@ -187,63 +187,23 @@
       <!-- ============================================================== -->
       <aside class="left-sidebar" data-sidebarbg="skin5">
         <!-- Sidebar scroll-->
-        <div class="scroll-sidebar">
-          <!-- Sidebar navigation-->
-          <nav class="sidebar-nav">
-            <ul id="sidebarnav">
-              <li class="sidebar-item">
-                <a
-                  href="Ajout_candidat.html"
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href=""
-                  aria-expanded="false"
-                >
-                  <i class="mdi mdi-account-network"></i>
-                  <span class="hide-menu">Ajouter un candidat</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  href="Liste_candidats.html"
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href=""
-                  aria-expanded="false"
-                >
-                  <i class="mdi mdi-av-timer"></i>
-                  <span class="hide-menu">Liste des candidats</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href=""
-                  aria-expanded="false"
-                >
-                  <i class="mdi mdi-account-network"></i>
-                  <span class="hide-menu">Profile de l'entreprise</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- End Sidebar navigation -->
-        </div>
+        
         <!-- End Sidebar scroll-->
       </aside>
       <div class="card" style="width: 50rem" id="formCandidat">
-        <form>
-          <center><h1>Ajout d'un nouveau candidat :</h1></center>
+        <form id="form_etab">
+          <center><h1>Modification de l'établissement:</h1></center>
           <br />
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"
-                >Nom du candidats</span
+                >Nom de l'établissement</span
               >
             </div>
             <input
               type="text"
-              id="nom_candidat"
+              id="new_nom_etab"
               class="form-control"
               placeholder="Nom"
               aria-label="Username"
@@ -254,35 +214,19 @@
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"
-                >Prenom du candidats</span
+                >Adresse</span
               >
             </div>
             <input
               type="text"
-              id="prenom_candidat"
+              id="new_adresse_etab"
               class="form-control"
-              placeholder="Prenom"
+              placeholder="Adresse"
               aria-label="Username"
               aria-describedby="basic-addon1"
             />
           </div>
-          <br /><br />
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
-                >Email du candidats</span
-              >
-            </div>
-            <input
-              type="email"
-              id="email_candidat"
-              class="form-control"
-              placeholder="Exemple@Exemple.com"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-          <br /><br />
+            <br /><br />
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"
@@ -291,24 +235,103 @@
             </div>
             <input
               type="number"
-              id="numero_candidat"
+              id="new_num_etab"
               class="form-control"
               placeholder="+216******"
               aria-label="Username"
               aria-describedby="basic-addon1"
             />
           </div>
+          <br /><br />
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"
+                >Fax</span
+              >
+            </div>
+            <input
+              type="number"
+              id="new_fax_etab"
+              class="form-control"
+              placeholder="*********"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <br /><br />
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"
+                >Email</span
+              >
+            </div>
+            <input
+              type="email"
+              id="new_email_etab"
+              class="form-control"
+              placeholder="Exemple@Exemple.com"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <br/><br/>
+          <div class="input-group-append">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupFileAddon01">Ajouter fichier</span>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01" >
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                  
+
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-secondary"  onclick="enreImg()">Ajouter</button>
+
+          </div>
+          <br /><br />
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"
+                >Mot de passe</span
+              >
+            </div>
+            <input
+              type="number"
+              id="new_password_etab"
+              class="form-control"
+              placeholder="*******"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <br /><br />
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"
+                >Confirmer mot de passe</span
+              >
+            </div>
+            <input
+              type="number"
+              id="new_passwordC_etab"
+              class="form-control"
+              placeholder="*******"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          
           <center>
             <button
               type="button"
-              onclick="ajout_candidats()"
-              id="ajouter_candidat"
+              onclick="modification_etab()"
               class="btn btn-success"
             >
-              Ajouter
+              Enregistrer
             </button>
           </center>
         </form>
+       
       </div>
       <!-- ============================================================== -->
       <!-- End Left Sidebar - style you can find in sidebar.scss  -->
@@ -360,6 +383,6 @@
     <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../dist/js/pages/dashboards/dashboard1.js"></script>
 
-    <script src="PageAdmin.js"></script>
+    <script src="modification_etab.js"></script>
   </body>
 </html>

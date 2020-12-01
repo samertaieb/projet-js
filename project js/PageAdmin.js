@@ -32,18 +32,31 @@ function ajout_candidats() {
   }
 }
 
+const tbody = document.getElementById("tbody_liste");
 function liste_candidats() {
   var candidats = JSON.parse(localStorage.getItem("tableau_candidats")) || [];
-  console.log(candidats);
-  const tbody = document.getElementById("tbody_liste");
   candidats.forEach((candidatObj) => {
-    console.log(candidatObj);
-    tbody.innerHTML += ` <tr>
+    tbody.innerHTML += ` <tr id="${candidatObj.id}">
     <th scope="col">${candidatObj.id}</th>
     <th scope="col">${candidatObj.nom}</th>
     <th scope="col">${candidatObj.prenom}</th>
     <th scope="col">${candidatObj.email}</th>
     <th scope="col">${candidatObj.numero}</th>
+   <th scope="col">
+   <button type="button" class="btn btn-warning">Modifier</button>
+   <button  type="button" class="btn btn-danger delete">Supprimer</button>
+   </th>
 </tr>`;
   });
 }
+
+tbody.addEventListener("click", (e) => {
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.parentElement.remove();
+    const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
+    const filteredCandisdats = candidats.filter(
+      (candidatObj) => candidatObj.id != e.target.parentElement.parentElement.id
+    );
+    localStorage.setItem("tableau_candidats", JSON.stringify(filteredCandisdats));
+  }
+});

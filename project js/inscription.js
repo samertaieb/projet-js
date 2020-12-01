@@ -15,7 +15,7 @@ function inscription(){
             fax:fax,
             email:email,
             password:password,
-            passwordConfirmed,
+            passwordConfirmed:passwordConfirmed,
             id:randomNumber,
          }
          console.log(user);
