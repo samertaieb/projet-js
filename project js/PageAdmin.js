@@ -36,30 +36,36 @@ const tbody = document.getElementById("tbody_liste");
 function liste_candidats() {
   var candidats = JSON.parse(localStorage.getItem("tableau_candidats")) || [];
   candidats.forEach((candidatObj) => {
-    tbody.innerHTML += ` <tr id="${candidatObj.id}">
-    <th scope="col">${candidatObj.id}</th>
-    <th scope="col">${candidatObj.nom}</th>
-    <th scope="col">${candidatObj.prenom}</th>
-    <th scope="col">${candidatObj.email}</th>
-    <th scope="col">${candidatObj.numero}</th>
-   <th scope="col">
+    tbody.innerHTML += ` <tr id="${candidatObj.id}" onclick="myFunction(this)">
+    <td scope="col">${candidatObj.id}</td>
+    <td scope="col">${candidatObj.nom}</td>
+    <td scope="col">${candidatObj.prenom}</td>
+    <td scope="col">${candidatObj.email}</td>
+    <td scope="col">${candidatObj.numero}</td>
+   <td scope="col">
    <a href="Modification_candidats.html"><button type="button" class="btn btn-warning modifier">Modifier</button></a>
-   <button type="button" class="btn btn-danger delete">Supprimer</button>
-   </th>
+   <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#exampleModal">Supprimer</button>
+   </td>
 </tr>`;
   });
 }
+let idCandidat2;
 
 tbody.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
-    e.target.parentElement.parentElement.remove();
-    const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
-    const filteredCandidats = candidats.filter(
-      (candidatObj) => candidatObj.id != e.target.parentElement.parentElement.id
-    );
-    localStorage.setItem("tableau_candidats", JSON.stringify(filteredCandidats));
+    idCandidat2 = e.target.parentElement.parentElement.id;
   }
 });
+let index;
+function myFunction(x) {
+  index = row.parentNode.parentNode.rowIndex;
+}
+function suprimerCandidat() {
+  const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
+  const filteredCandidats = candidats.filter((candidatObj) => candidatObj.id != idCandidat2);
+  localStorage.setItem("tableau_candidats", JSON.stringify(filteredCandidats));
+  tbody.deleteRow(index);
+}
 
 function LOGOUT() {
   localStorage.removeItem("user");
