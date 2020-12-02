@@ -678,49 +678,49 @@ input.checkbox:checked:after {
   }
 }
 @media (max-width: 767px) {
-	.main-agileits {
-		width: 100%;
-	  }
-	
-	  .left-form-w3-agile {
-		padding: 14px 0px;
-		float: none;
-		width: 100%;
-	  }
-	  .right-map-w3-agile {
-		border-left: none;
-		border-top: 1px solid rgb(62, 58, 56);
-	  }
-	  .main-agileits {
-		width: 100%;
-		padding: 0px 20px;
-	  }
-	  input[type="submit"] {
-		float: none;
-	  }
-	  .left-form-w3-agile input[type="email"],
-	  .left-form-w3-agile input[type="text"],
-	  .left-form-w3-agile input[type="tel"],
-	  .left-form-w3-agile input[type="password"] {
-		width: 93.8%;
-		margin-bottom: 10px;
-	  }
-	  .right-map-w3-agile input[type="text"],
-	  .right-map-w3-agile input[type="password"],
-	  .right-map-w3-agile input[type="email"] {
-		width: 94.2%;
-		margin-bottom: 10px;
-	  }
-	  h1 {
-		font-size: 31px;
-		margin: 30px 0;
-		letter-spacing: 6px;
-	  }
-	  .copyright p {
-		margin: 26px 0px;
-	  }
-	}
+  .main-agileits {
+    width: 100%;
+  }
+
+  .left-form-w3-agile {
+    padding: 14px 0px;
+    float: none;
+    width: 100%;
+  }
+  .right-map-w3-agile {
+    border-left: none;
+    border-top: 1px solid rgb(62, 58, 56);
+  }
+  .main-agileits {
+    width: 100%;
+    padding: 0px 20px;
+  }
+  input[type="submit"] {
+    float: none;
+  }
+  .left-form-w3-agile input[type="email"],
+  .left-form-w3-agile input[type="text"],
+  .left-form-w3-agile input[type="tel"],
+  .left-form-w3-agile input[type="password"] {
+    width: 93.8%;
+    margin-bottom: 10px;
+  }
+  .right-map-w3-agile input[type="text"],
+  .right-map-w3-agile input[type="password"],
+  .right-map-w3-agile input[type="email"] {
+    width: 94.2%;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 31px;
+    margin: 30px 0;
+    letter-spacing: 6px;
+  }
+  .copyright p {
+    margin: 26px 0px;
+  }
 }
+
 @media (max-width: 736px) {
   .main-agileits {
     width: 100%;
@@ -774,7 +774,7 @@ input.checkbox:checked:after {
     float: none;
     width: 100%;
   }
-  
+
   .main-agileits {
     width: 100%;
     padding: 0px 20px;

@@ -2,6 +2,7 @@ var tableau_candidats =
   JSON.parse(localStorage.getItem("tableau_candidats")) || [];
 
 var ajouter_candidat = document.getElementById("ajouter_candidat");
+var user = JSON.parse(localStorage.getItem("user"));
 
 function ajout_candidats() {
   let MSG = "";
@@ -9,19 +10,23 @@ function ajout_candidats() {
   const prenom_candidat = document.getElementById("prenom_candidat").value;
   const numero_candidat = document.getElementById("numero_candidat").value;
   const email_candidat = document.getElementById("email_candidat").value;
+
   if (
     nom_candidat != "" &&
     prenom_candidat != "" &&
     email_candidat != "" &&
     numero_candidat != ""
   ) {
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (nom_candidat != "" && prenom_candidat != "" && email_candidat != "" && numero_candidat != "") {
     var candidatObj = {
       nom: nom_candidat,
       prenom: prenom_candidat,
       numero: numero_candidat,
       email: email_candidat,
       id: tableau_candidats.length + 1000,
-      idEtablissement: "",
+      idEtablissement: user.id,
     };
     tableau_candidats.push(candidatObj);
     localStorage.setItem(
@@ -43,8 +48,12 @@ function ajout_candidats() {
 
 const tbody = document.getElementById("tbody_liste");
 function liste_candidats() {
+  const user = JSON.parse(localStorage.getItem("user"));
   var candidats = JSON.parse(localStorage.getItem("tableau_candidats")) || [];
   candidats.forEach(candidatObj => {
+
+  const candidatsSession = candidats.filter((candidatObj) => candidatObj.idEtablissement == user.id);
+  candidatsSession.forEach((candidatObj) => {
     tbody.innerHTML += ` <tr id="${candidatObj.id}" onclick="myFunction(this)">
     <td scope="col">${candidatObj.id}</td>
     <td scope="col">${candidatObj.nom}</td>
@@ -98,6 +107,7 @@ update.addEventListener("click", () => {
   };
 
   const newCandidat = candidats.map(candidat => {
+  const newCandidat = candidats.map((candidat) => {
     if (candidat.id == modifiedCandidats.id) {
       candidat = modifiedCandidats;
     }
@@ -129,6 +139,5 @@ function LOGOUT() {
 
 function bonjourUtilisateur() {
   const user = JSON.parse(localStorage.getItem("user"));
-  document.getElementById("BJ").innerHTML =
-    "BIENVENUE CHEZ NOUS " + user.nomEtablissament;
+  document.getElementById("BJ").innerHTML = "BIENVENUE CHEZ NOUS " + user.nomEtablissament;
 }

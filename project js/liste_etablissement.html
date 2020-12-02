@@ -27,7 +27,7 @@
 <![endif]-->
 </head>
 
-<body>
+<body onload="liste_etab()">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -133,13 +133,12 @@
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    
                     <ul id="sidebarnav">
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="liste_etablissement.html"
                                 aria-expanded="false">
                                 <i class="mdi mdi-av-timer"></i>
-                               <span class="hide-menu" >Liste des etablissements</span>
+                                <span class="hide-menu">Liste des entreprises</span>
                             </a>
                         </li>
                     </ul>
@@ -155,24 +154,100 @@
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Email campaign chart -->
-                <!-- ============================================================== -->
-                
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Rapport de visite du site:</h4>
-                                <div class="sales ct-charts mt-3"></div>
-                            </div>
-                        </div>
-                    </div>
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-5 align-self-center">
+                        <h4 class="page-title">Liste des entreprises:</h4>
+                    </div>
+                    <div class="col-7 align-self-center">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
             
+                
+                <!-- ============================================================== -->
+                <!-- Email campaign chart -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Ravenue - page-view-bounce rate -->
+                <!-- ============================================================== -->
+                
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">logo-icon</th>
+                                            <th class="border-top-0">Nom établissement</th>
+                                            <th class="border-top-0">Adresse</th>
+                                            <th class="border-top-0">Téléphone</th>
+                                            <th class="border-top-0">Fax</th>
+                                            <th class="border-top-0">Email</th>
+                                            <th class="border-top-0">Password</th>
+                                            <th class="border-top-0">Id</th>
+                                            <th class="border-top-0">Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tab_etab">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- Ravenue - page-view-bounce rate -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Recent comment and chats -->
+                <!-- ============================================================== -->
+                
+                   
+                
+                <!-- ============================================================== -->
+                <!-- Recent comment and chats -->
+                <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>

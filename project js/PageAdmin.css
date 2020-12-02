@@ -1,6 +1,7 @@
 body {
-  background-image: url(Page_admin.jpg);
+  background-image: url(oooo.jpg);
 }
+
 #formCandidat {
   width: 800px;
   border: 30px;
@@ -16,7 +17,6 @@ body {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  display: block;
 }
 #titre_page_candidats {
   margin-left: auto;
