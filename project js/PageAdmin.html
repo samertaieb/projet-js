@@ -19,6 +19,10 @@
     <meta name="robots" content="noindex,nofollow" />
     <title>Page Admin-Acceuil</title>
     <link rel="stylesheet" href="PageAdmin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
     <!-- <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-lite/" /> -->
     <!-- Favicon icon -->
     <!-- <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" /> -->
@@ -56,6 +60,9 @@
       </form>
       <button type="button" id="logOut" onclick="LOGOUT()" class="btn btn-danger">Se deconnecter</button>
     </nav>
+    <center>
+      <strong><p id="BJ" style="margin-top: 60px; font-size: 35px"></p></strong>
+    </center>
     <!-- <style>
         body{
             background-image: url("Page_admin.jpg");
@@ -96,10 +103,11 @@
                     href="PageAdmin.html"
                     aria-expanded="false"
                   >
-                    <i class="mdi mdi-account-network"></i>
+                    <i class="fas fa-home"></i>
                     <span class="hide-menu">Acceuil</span>
                   </a>
                 </li>
+                <br />
                 <li class="sidebar-item">
                   <a
                     href="Ajout_candidat.html"
@@ -107,10 +115,11 @@
                     href=""
                     aria-expanded="false"
                   >
-                    <i class="mdi mdi-account-network"></i>
+                    <i class="fas fa-user-plus"></i>
                     <span class="hide-menu">Ajouter un candidat</span>
                   </a>
                 </li>
+                <br />
                 <li class="sidebar-item">
                   <a
                     href="Liste_candidats.html"
@@ -118,17 +127,19 @@
                     href=""
                     aria-expanded="false"
                   >
-                    <i class="mdi mdi-av-timer"></i>
+                    <i class="fas fa-list"></i>
                     <span class="hide-menu">Liste des candidats</span>
                   </a>
                 </li>
+                <br />
                 <li class="sidebar-item">
                   <a
                     class="sidebar-link waves-effect waves-dark sidebar-link"
                     href="donnéesEntreprise.html"
                     aria-expanded="false"
                   >
-                    <i class="mdi mdi-account-network"></i>
+                    <i class="fas fa-user"></i>
+
                     <span class="hide-menu">Profile de l'entreprise</span>
                   </a>
                 </li>
@@ -139,10 +150,10 @@
           </div>
           <!-- End Sidebar scroll-->
         </aside>
-        <div>
+        <!-- <div>
           <p id="Pgraph">Taux de reussite par matiére :</p>
           <img src="graph.png" id="graph" />
-        </div>
+        </div> -->
       </div>
 
       <!-- ============================================================== -->
@@ -177,6 +188,127 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
+    <div class="container" style="top: 50px; left: 1100px; position: fixed">
+      <div class="row">
+        <div class="span12">
+          <table class="table-condensed table-bordered table-striped">
+            <thead>
+              <tr>
+                <th colspan="7">
+                  <span class="btn-group">
+                    <a class="btn"><i class="icon-chevron-left"></i></a>
+                    <a class="btn active">Decembre 2020</a>
+                    <a class="btn"><i class="icon-chevron-right"></i></a>
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <th>Su</th>
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="muted">29</td>
+                <td class="muted">30</td>
+                <td class="muted">31</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td class="btn-primary"><strong>4</strong></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td class="muted">1</td>
+                <td class="muted">2</td>
+                <td class="muted">3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <center>
+      <p>
+        <a
+          class="btn btn-primary"
+          data-toggle="collapse"
+          href="#multiCollapseExample1"
+          role="button"
+          aria-expanded="false"
+          aria-controls="multiCollapseExample1"
+          >Taux de réussite des candidats par matiére</a
+        >
+        <a
+          class="btn btn-primary"
+          data-toggle="collapse"
+          href="#multiCollapseExample2"
+          data-target="#multiCollapseExample2"
+          aria-expanded="false"
+          aria-controls="multiCollapseExample2"
+          >Les notes de reussite des candidats suivant les sections</a
+        >
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target=".multi-collapse"
+          aria-expanded="false"
+          aria-controls="multiCollapseExample1 multiCollapseExample2"
+        >
+          Fermer
+        </button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              <img src="graph.png" id="graph" style="width: 300px" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body"><img src="graph2.png" / style="width: 300px;"></div>
+          </div>
+        </div>
+      </div>
+    </center>
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
