@@ -4,10 +4,7 @@ function seConnecter() {
   var password = document.getElementById("password").value;
 
   if (email != "" || password != "") {
-    const user = users.find(
-      element => element.email == email && element.password == password
-    );
-    console.log(user);
+    const user = users.find((element) => element.email == email && element.password == password);
     if (user != undefined) {
       if (email == "superAdmin@super.com") {
         window.location.href = "page_super_admin.html";
@@ -19,7 +16,6 @@ function seConnecter() {
     } else alert("email or password invalid! try again or sign up");
   } else alert("remplissez tous les champs!");
 }
-
 
 function toSignUp() {
   window.location.replace("inscription.html");
