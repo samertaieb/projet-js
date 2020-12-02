@@ -4,7 +4,9 @@ function seConnecter() {
   var password = document.getElementById("password").value;
 
   if (email != "" || password != "") {
-    const user = users.find((element) => element.email == email && element.password == password);
+    const user = users.find(
+      element => element.email == email && element.password == password
+    );
     if (user != undefined) {
       if (email == "superAdmin@super.com") {
         window.location.href = "page_super_admin.html";

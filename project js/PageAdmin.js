@@ -43,18 +43,62 @@ function liste_candidats() {
     <td scope="col">${candidatObj.email}</td>
     <td scope="col">${candidatObj.numero}</td>
    <td scope="col">
-   <a href="Modification_candidats.html"><button type="button" class="btn btn-warning modifier">Modifier</button></a>
-   <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#exampleModal">Supprimer</button>
+   <button type="button" class="btn btn-primary modifier" data-toggle="modal" data-target="#exampleModal" >
+modifier</button>
+   <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#deleteModal">Supprimer</button>
    </td>
 </tr>`;
   });
 }
 let idCandidat2;
 
+const newNomCandidat = document.getElementById("newNomCandidat");
+const newPrenomCandidat = document.getElementById("newPrenomCandidat");
+const newEmailCandidat = document.getElementById("newEmailCandidat");
+const newNumeroCandidat = document.getElementById("newNumeroCandidat");
+let idCandidat;
+
 tbody.addEventListener("click", (e) => {
+  const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
   if (e.target.classList.contains("delete")) {
     idCandidat2 = e.target.parentElement.parentElement.id;
   }
+  if (e.target.classList.contains("modifier")) {
+    const mofifierCandidat = candidats.find(
+      (candidatObj) => candidatObj.id == e.target.parentElement.parentElement.id
+    );
+    idCandidat = e.target.parentElement.parentElement.id;
+    newNomCandidat.value = mofifierCandidat.nom;
+    newPrenomCandidat.value = mofifierCandidat.prenom;
+    newEmailCandidat.value = mofifierCandidat.email;
+    newNumeroCandidat.value = mofifierCandidat.numero;
+  }
+});
+// console.log(mofifierCandidat);
+
+// const user = JSON.parse(localStorage.getItem("user")) || [];
+const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
+const update = document.querySelector("#update");
+
+update.addEventListener("click", () => {
+  const modifiedCandidats = {
+    nom: newNomCandidat.value,
+    prenom: newPrenomCandidat.value,
+    email: newEmailCandidat.value,
+    numero: newNumeroCandidat.value,
+    id: idCandidat,
+  };
+
+  const newCandidat = candidats.map((candidat) => {
+    if (candidat.id == modifiedCandidats.id) {
+      candidat = modifiedCandidats;
+    }
+    return candidat;
+  });
+  console.log(newCandidat);
+  localStorage.setItem("tableau_candidats", JSON.stringify(newCandidat));
+  alert((MSG = "Vous avez modifier vos données avec succées"));
+  MSG.color = "green";
 });
 let index;
 function myFunction(x) {

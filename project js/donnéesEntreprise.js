@@ -1,6 +1,6 @@
 const users = JSON.parse(localStorage.getItem("users")) || [];
 const user = JSON.parse(localStorage.getItem("user")) || [];
-const newNomEtablissament = document.getElementById("newNomEntreprise");
+const newNomEtablissement = document.getElementById("newNomEntreprise");
 const newAdresse = document.getElementById("newAdresse");
 const newTel = document.getElementById("newTelEntreprise");
 const newFax = document.getElementById("newFaxEntreprise");
@@ -8,7 +8,7 @@ const newEmail = document.getElementById("newEmailEntreprise");
 const newPassword = document.getElementById("newPassword");
 const newPasswordConfirmed = document.getElementById("newPasswordConfirmed");
 
-newNomEtablissament.value = user.nomEtablissament;
+newNomEtablissement.value = user.nomEtablissement;
 newAdresse.value = user.adresse;
 newTel.value = user.tel;
 newFax.value = user.fax;
@@ -17,7 +17,7 @@ newPassword.value = user.password;
 newPasswordConfirmed.value = user.passwordConfirmed;
 function modificationDonnées() {
   const modifiedObj = {
-    nomEtablissament: newNomEtablissament.value,
+    nomEtablissement: newNomEtablissement.value,
     adresse: newAdresse.value,
     tel: newTel.value,
     fax: newFax.value,
@@ -27,11 +27,13 @@ function modificationDonnées() {
     id: user.id,
   };
   localStorage.setItem("user", JSON.stringify(modifiedObj));
-  const newUsers = users.map(entrep => {
-    if (entrep.id === user.id) {
-      entrep = modifiedObj;
+  const newUser = users.map(entreprise => {
+    if (entreprise.id === user.id) {
+      entreprise = modifiedObj;
     }
-    return entrep;
+    return entreprise;
   });
-  localStorage.setItem("users", JSON.stringify(newUsers));
+  localStorage.setItem("newuser", JSON.stringify(newUser));
+  alert((MSG = "Vous avez modifier vos données avec succées"));
+  MSG.color = "green";
 }
