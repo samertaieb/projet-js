@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <link rel="stylesheet" href="donnéesEntreprise.css" />
+    <link rel="stylesheet" href="PageAdmin.css" />
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -17,22 +18,11 @@
     />
     <meta name="robots" content="noindex,nofollow" />
     <title>Page d'acceuil</title>
-    <link
-      rel="canonical"
-      href="https://www.wrappixel.com/templates/niceadmin-lite/"
-    />
+    <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-lite/" />
     <!-- Favicon icon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../assets/images/favicon.png"
-    />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
     <!-- Custom CSS -->
-    <link
-      href="../assets/libs/chartist/dist/chartist.min.css"
-      rel="stylesheet"
-    />
+    <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../dist/css/style.min.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -44,6 +34,27 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-dark bg-dark fixed-top bg-primary">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <div>
+        <a href="PageAdmin.html">
+          <img src="logosite.jpg" style="width: 30px; height: 35px" />
+          <h3 style="display: inline; color: aliceblue; font-style: solid">ORMAPLAT</h3></a
+        >
+      </div>
+
+      <form class="form-inline mr-auto" style="margin-left: 300px">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          style="width: 400px"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <button type="button" id="logOut" onclick="LOGOUT()" class="btn btn-danger">Se deconnecter</button>
+    </nav>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -67,113 +78,7 @@
       <!-- ============================================================== -->
       <!-- Topbar header - style you can find in pages.scss -->
       <!-- ============================================================== -->
-      <header class="topbar" data-navbarbg="skin6">
-        <nav class="navbar top-navbar navbar-expand-md navbar-light">
-          <div class="navbar-header" data-logobg="skin5">
-            <!-- This is for the sidebar toggle which is visible on mobile only -->
-            <a
-              class="nav-toggler waves-effect waves-light d-block d-md-none"
-              href="javascript:void(0)"
-            >
-              <i class="ti-menu ti-close"></i>
-            </a>
-            <!-- ============================================================== -->
-            <!-- Logo -->
-            <!-- ============================================================== -->
-            <div class="navbar-brand">
-              <a href="index.html" class="logo">
-                <!-- Logo icon -->
-                <b class="logo-icon">
-                  <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                  <!-- Dark Logo icon -->
-                  <img
-                    src="../assets/images/logo-icon.png"
-                    alt="homepage"
-                    class="dark-logo"
-                  />
-                  <!-- Light Logo icon -->
-                  <img
-                    src="../assets/images/logo-light-icon.png"
-                    alt="homepage"
-                    class="light-logo"
-                  />
-                </b>
-                <!--End Logo icon -->
-                <!-- Logo text -->
-                <span class="logo-text">
-                  <!-- dark Logo text -->
-                  <img
-                    src="../assets/images/logo-text.png"
-                    alt="homepage"
-                    class="dark-logo"
-                  />
-                  <!-- Light Logo text -->
-                  <img
-                    src="../assets/images/logo-light-text.png"
-                    class="light-logo"
-                    alt="homepage"
-                  />
-                </span>
-              </a>
-            </div>
-            <!-- ============================================================== -->
-            <!-- End Logo -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Toggle which is visible on mobile only -->
-            <!-- ============================================================== -->
-            <a
-              class="topbartoggler d-block d-md-none waves-effect waves-light"
-              href="javascript:void(0)"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="ti-more"></i>
-            </a>
-          </div>
-          <!-- ============================================================== -->
-          <!-- End Logo -->
-          <!-- ============================================================== -->
-          <div
-            class="navbar-collapse collapse"
-            id="navbarSupportedContent"
-            data-navbarbg="skin6"
-          >
-            <!-- ============================================================== -->
-            <!-- toggle and nav items -->
-            <!-- ============================================================== -->
-            <p class="text-xl-center">Bonjour Utilisateur.</p>
 
-            <!-- ============================================================== -->
-            <!-- Right side toggle and nav items -->
-            <!-- ============================================================== -->
-            <ul class="navbar-nav float-right">
-              <!-- ============================================================== -->
-              <!-- User profile and search -->
-              <!-- ============================================================== -->
-              <li class="nav-item dropdown">
-                <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="ti-user m-r-5 m-l-5"></i> My Profile</a
-                  >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a
-                  >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="ti-email m-r-5 m-l-5"></i> Inbox</a
-                  >
-                </div>
-              </li>
-              <!-- ============================================================== -->
-              <!-- User profile and search -->
-              <!-- ============================================================== -->
-            </ul>
-          </div>
-        </nav>
-      </header>
       <!-- ============================================================== -->
       <!-- End Topbar header -->
       <!-- ============================================================== -->
@@ -186,6 +91,16 @@
           <!-- Sidebar navigation-->
           <nav class="sidebar-nav">
             <ul id="sidebarnav">
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="PageAdmin.html"
+                  aria-expanded="false"
+                >
+                  <i class="mdi mdi-account-network"></i>
+                  <span class="hide-menu">Acceuil</span>
+                </a>
+              </li>
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -224,60 +139,36 @@
         <!-- End Sidebar scroll-->
       </aside>
       <div class="card" style="width: 50rem" id="formCandidat">
-        <form>
+        <form style="margin-top: 90px">
           <center><h1>Modification des données de l'entreprise :</h1></center>
           <br />
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
-                >Nom de votre entreprise</span
-              >
+              <span class="input-group-text" id="basic-addon1">Nom de votre entreprise</span>
             </div>
-            <input
-              type="text"
-              id="newNomEntreprise"
-              class="form-control"
-              placeholder="Nom de l'entreprise"
-            />
+            <input type="text" id="newNomEntreprise" class="form-control" placeholder="Nom de l'entreprise" />
           </div>
           <br /><br />
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
-                >Votre adresse</span
-              >
+              <span class="input-group-text" id="basic-addon1">Votre adresse</span>
             </div>
-            <input
-              type="text"
-              id="newAdresse"
-              class="form-control"
-              placeholder="Adresse"
-            />
+            <input type="text" id="newAdresse" class="form-control" placeholder="Adresse" />
           </div>
           <br /><br />
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">tel</span>
             </div>
-            <input
-              type="email"
-              id="newTelEntreprise"
-              class="form-control"
-              placeholder="+216******"
-            />
+            <input type="email" id="newTelEntreprise" class="form-control" placeholder="+216******" />
           </div>
           <br /><br />
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">fax</span>
             </div>
-            <input
-              type="number"
-              id="newFaxEntreprise"
-              class="form-control"
-              placeholder="+216******"
-            />
+            <input type="number" id="newFaxEntreprise" class="form-control" placeholder="+216******" />
           </div>
           <br /><br />
           <div class="input-group mb-3">
@@ -294,24 +185,15 @@
           <br /><br />
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
-                >Mot de passe</span
-              >
+              <span class="input-group-text" id="basic-addon1">Mot de passe</span>
             </div>
             <br /><br />
-            <input
-              type="password"
-              id="newPassword"
-              class="form-control"
-              placeholder="Votre mot de passe"
-            />
+            <input type="password" id="newPassword" class="form-control" placeholder="Votre mot de passe" />
           </div>
           <br /><br />
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
-                >confirmer le mot de passe
-              </span>
+              <span class="input-group-text" id="basic-addon1">confirmer le mot de passe </span>
             </div>
             <input
               type="password"
@@ -353,6 +235,8 @@
       <!-- End footer -->
       <!-- ============================================================== -->
     </div>
+    <button type="button" id="logOut" onclick="LOGOUT()" class="btn btn-danger">Se deconnecter</button>
+
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
     <!-- ============================================================== -->
