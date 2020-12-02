@@ -10,6 +10,7 @@ function ajout_candidats() {
   const prenom_candidat = document.getElementById("prenom_candidat").value;
   const numero_candidat = document.getElementById("numero_candidat").value;
   const email_candidat = document.getElementById("email_candidat").value;
+  const user = JSON.parse(localStorage.getItem("user"));
 
   if (
     nom_candidat != "" &&
@@ -17,9 +18,6 @@ function ajout_candidats() {
     email_candidat != "" &&
     numero_candidat != ""
   ) {
-  const user = JSON.parse(localStorage.getItem("user"));
-
-  if (nom_candidat != "" && prenom_candidat != "" && email_candidat != "" && numero_candidat != "") {
     var candidatObj = {
       nom: nom_candidat,
       prenom: prenom_candidat,
@@ -33,7 +31,6 @@ function ajout_candidats() {
       "tableau_candidats",
       JSON.stringify(tableau_candidats)
     );
-    // const alert11 = document.getElementById("alert_candidat").innerHTML = "Candidat ajouté avec succée"
     document.getElementById("nom_candidat").value = "";
     document.getElementById("prenom_candidat").value = "";
     document.getElementById("email_candidat").value = "";
@@ -50,10 +47,10 @@ const tbody = document.getElementById("tbody_liste");
 function liste_candidats() {
   const user = JSON.parse(localStorage.getItem("user"));
   var candidats = JSON.parse(localStorage.getItem("tableau_candidats")) || [];
-  candidats.forEach(candidatObj => {
-
-  const candidatsSession = candidats.filter((candidatObj) => candidatObj.idEtablissement == user.id);
-  candidatsSession.forEach((candidatObj) => {
+  const candidatsSession = candidats.filter(
+    candidatObj => candidatObj.idEtablissement == user.id
+  );
+  candidatsSession.forEach(candidatObj => {
     tbody.innerHTML += ` <tr id="${candidatObj.id}" onclick="myFunction(this)">
     <td scope="col">${candidatObj.id}</td>
     <td scope="col">${candidatObj.nom}</td>
@@ -105,9 +102,7 @@ update.addEventListener("click", () => {
     numero: newNumeroCandidat.value,
     id: idCandidat,
   };
-
   const newCandidat = candidats.map(candidat => {
-  const newCandidat = candidats.map((candidat) => {
     if (candidat.id == modifiedCandidats.id) {
       candidat = modifiedCandidats;
     }
@@ -139,5 +134,6 @@ function LOGOUT() {
 
 function bonjourUtilisateur() {
   const user = JSON.parse(localStorage.getItem("user"));
-  document.getElementById("BJ").innerHTML = "BIENVENUE CHEZ NOUS " + user.nomEtablissament;
+  document.getElementById("BJ").innerHTML =
+    "Bienvenue chez notre platforme : <br>" + user.nomEtablissament;
 }
