@@ -74,7 +74,6 @@ tbody.addEventListener("click", (e) => {
     newNumeroCandidat.value = mofifierCandidat.numero;
   }
 });
-// console.log(mofifierCandidat);
 
 // const user = JSON.parse(localStorage.getItem("user")) || [];
 const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
@@ -97,11 +96,12 @@ update.addEventListener("click", () => {
   });
   console.log(newCandidat);
   localStorage.setItem("tableau_candidats", JSON.stringify(newCandidat));
-  alert((MSG = "Vous avez modifier vos données avec succées"));
-  MSG.color = "green";
+  // alert((MSG = "Vous avez modifier vos données avec succées"));
+  // MSG.color = "green";
+  location.reload();
 });
 let index;
-function myFunction(x) {
+function myFunction() {
   index = row.parentNode.parentNode.rowIndex;
 }
 function suprimerCandidat() {
