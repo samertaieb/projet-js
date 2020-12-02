@@ -74,8 +74,6 @@ tbody.addEventListener("click", (e) => {
     newNumeroCandidat.value = mofifierCandidat.numero;
   }
 });
-
-// const user = JSON.parse(localStorage.getItem("user")) || [];
 const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
 const update = document.querySelector("#update");
 
