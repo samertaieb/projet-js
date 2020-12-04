@@ -17,7 +17,7 @@
     />
 
     <meta name="robots" content="noindex,nofollow" />
-    <title>Page Admin</title>
+    <title>Page Admin-Acceuil</title>
     <link rel="stylesheet" href="PageAdmin.css" />
     <!-- <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-lite/" /> -->
     <!-- Favicon icon -->
@@ -35,6 +35,27 @@
   </head>
 
   <body onload=" bonjourUtilisateur()">
+    <nav class="navbar navbar-dark bg-dark fixed-top bg-primary">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <div>
+        <a href="PageAdmin.html">
+          <img src="logosite.jpg" style="width: 30px; height: 35px" />
+          <h3 style="display: inline; color: aliceblue; font-style: solid">ORMAPLAT</h3></a
+        >
+      </div>
+
+      <form class="form-inline mr-auto" style="margin-left: 300px">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          style="width: 400px"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <button type="button" id="logOut" onclick="LOGOUT()" class="btn btn-danger">Se deconnecter</button>
+    </nav>
     <!-- <style>
         body{
             background-image: url("Page_admin.jpg");
@@ -43,82 +64,87 @@
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
-    <div class="preloader">
+    <!-- <div class="preloader">
       <div class="lds-ripple">
         <div class="lds-pos"></div>
         <div class="lds-pos"></div>
       </div>
-    </div>
+    </div> -->
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <div
-      id="main-wrapper"
-      data-navbarbg="skin6"
-      data-theme="light"
-      data-layout="vertical"
-      data-sidebartype="full"
-      data-boxed-layout="full"
-    >
-      <!-- ============================================================== -->
-      <!-- Topbar header - style you can find in pages.scss -->
-      <!-- ============================================================== -->
 
-      <!-- ============================================================== -->
-      <!-- End Topbar header -->
-      <!-- ============================================================== -->
-      <!-- ============================================================== -->
-      <!-- Left Sidebar - style you can find in sidebar.scss  -->
-      <!-- ============================================================== -->
-      <aside class="left-sidebar" data-sidebarbg="skin5">
-        <!-- Sidebar scroll-->
-        <div class="scroll-sidebar">
-          <!-- Sidebar navigation-->
-          <nav class="sidebar-nav">
-            <ul id="sidebarnav">
-              <li class="sidebar-item">
-                <a
-                  href="Ajout_candidat.html"
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href=""
-                  aria-expanded="false"
-                >
-                  <i class="mdi mdi-account-network"></i>
-                  <span class="hide-menu">Ajouter un candidat</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  href="Liste_candidats.html"
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href=""
-                  aria-expanded="false"
-                >
-                  <i class="mdi mdi-av-timer"></i>
-                  <span class="hide-menu">Liste des candidats</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="donnéesEntreprise.html"
-                  aria-expanded="false"
-                >
-                  <i class="mdi mdi-account-network"></i>
-                  <span class="hide-menu">Profile de l'entreprise</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+    <div class="container-fluid">
+      <div
+        id="main-wrapper"
+        data-navbarbg="skin6"
+        data-theme="light"
+        data-layout="vertical"
+        data-sidebartype="full"
+        data-boxed-layout="full"
+        style="margin-top: 50px"
+      >
+        <aside class="left-sidebar" data-sidebarbg="skin5" style="left: 0px">
+          <!-- Sidebar scroll-->
+          <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+              <ul id="sidebarnav">
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link waves-effect waves-dark sidebar-link"
+                    href="PageAdmin.html"
+                    aria-expanded="false"
+                  >
+                    <i class="mdi mdi-account-network"></i>
+                    <span class="hide-menu">Acceuil</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    href="Ajout_candidat.html"
+                    class="sidebar-link waves-effect waves-dark sidebar-link"
+                    href=""
+                    aria-expanded="false"
+                  >
+                    <i class="mdi mdi-account-network"></i>
+                    <span class="hide-menu">Ajouter un candidat</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    href="Liste_candidats.html"
+                    class="sidebar-link waves-effect waves-dark sidebar-link"
+                    href=""
+                    aria-expanded="false"
+                  >
+                    <i class="mdi mdi-av-timer"></i>
+                    <span class="hide-menu">Liste des candidats</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link waves-effect waves-dark sidebar-link"
+                    href="donnéesEntreprise.html"
+                    aria-expanded="false"
+                  >
+                    <i class="mdi mdi-account-network"></i>
+                    <span class="hide-menu">Profile de l'entreprise</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
 
-          <!-- End Sidebar navigation -->
+            <!-- End Sidebar navigation -->
+          </div>
+          <!-- End Sidebar scroll-->
+        </aside>
+        <div>
+          <p id="Pgraph">Taux de reussite par matiére :</p>
+          <img src="graph.png" id="graph" />
         </div>
-        <!-- End Sidebar scroll-->
-      </aside>
-      <p id="BJ"></p>
-      <p id="Pgraph">Taux de reussite par matiére :</p>
-      <img src="graph.png" id="graph" />
-      <button type="button" id="logOut" onclick="LOGOUT()" class="btn btn-danger">Se deconnecter</button>
+      </div>
+
       <!-- ============================================================== -->
       <!-- End Left Sidebar - style you can find in sidebar.scss  -->
       <!-- ============================================================== -->
