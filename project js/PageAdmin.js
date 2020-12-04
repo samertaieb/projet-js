@@ -22,7 +22,6 @@ function ajout_candidats() {
     };
     tableau_candidats.push(candidatObj);
     localStorage.setItem("tableau_candidats", JSON.stringify(tableau_candidats));
-    // const alert11 = document.getElementById("alert_candidat").innerHTML = "Candidat ajouté avec succée"
     document.getElementById("nom_candidat").value = "";
     document.getElementById("prenom_candidat").value = "";
     document.getElementById("email_candidat").value = "";
@@ -122,5 +121,5 @@ function LOGOUT() {
 
 function bonjourUtilisateur() {
   const user = JSON.parse(localStorage.getItem("user"));
-  document.getElementById("BJ").innerHTML = "BIENVENUE CHEZ NOUS " + user.nomEtablissament;
+  document.getElementById("BJ").innerHTML = "Bienvenue chez notre platforme : <br>" + user.nomEtablissament;
 }
