@@ -1,4 +1,5 @@
-var tableau_candidats = JSON.parse(localStorage.getItem("tableau_candidats")) || [];
+var tableau_candidats =
+  JSON.parse(localStorage.getItem("tableau_candidats")) || [];
 
 var ajouter_candidat = document.getElementById("ajouter_candidat");
 var user = JSON.parse(localStorage.getItem("user"));
@@ -11,7 +12,12 @@ function ajout_candidats() {
   const email_candidat = document.getElementById("email_candidat").value;
   const user = JSON.parse(localStorage.getItem("user"));
 
-  if (nom_candidat != "" && prenom_candidat != "" && email_candidat != "" && numero_candidat != "") {
+  if (
+    nom_candidat != "" &&
+    prenom_candidat != "" &&
+    email_candidat != "" &&
+    numero_candidat != ""
+  ) {
     var candidatObj = {
       nom: nom_candidat,
       prenom: prenom_candidat,
@@ -21,7 +27,10 @@ function ajout_candidats() {
       idEtablissement: user.id,
     };
     tableau_candidats.push(candidatObj);
-    localStorage.setItem("tableau_candidats", JSON.stringify(tableau_candidats));
+    localStorage.setItem(
+      "tableau_candidats",
+      JSON.stringify(tableau_candidats)
+    );
     document.getElementById("nom_candidat").value = "";
     document.getElementById("prenom_candidat").value = "";
     document.getElementById("email_candidat").value = "";
@@ -38,8 +47,10 @@ const tbody = document.getElementById("tbody_liste");
 function liste_candidats() {
   const user = JSON.parse(localStorage.getItem("user"));
   var candidats = JSON.parse(localStorage.getItem("tableau_candidats")) || [];
-  const candidatsSession = candidats.filter((candidatObj) => candidatObj.idEtablissement == user.id);
-  candidatsSession.forEach((candidatObj) => {
+  const candidatsSession = candidats.filter(
+    candidatObj => candidatObj.idEtablissement == user.id
+  );
+  candidatsSession.forEach(candidatObj => {
     tbody.innerHTML += ` <tr id="${candidatObj.id}" onclick="myFunction(this)">
     <td scope="col">${candidatObj.id}</td>
     <td scope="col">${candidatObj.nom}</td>
@@ -62,14 +73,14 @@ const newEmailCandidat = document.getElementById("newEmailCandidat");
 const newNumeroCandidat = document.getElementById("newNumeroCandidat");
 let idCandidat;
 
-tbody.addEventListener("click", (e) => {
+tbody.addEventListener("click", e => {
   const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
   if (e.target.classList.contains("delete")) {
     idCandidat2 = e.target.parentElement.parentElement.id;
   }
   if (e.target.classList.contains("modifier")) {
     const mofifierCandidat = candidats.find(
-      (candidatObj) => candidatObj.id == e.target.parentElement.parentElement.id
+      candidatObj => candidatObj.id == e.target.parentElement.parentElement.id
     );
     idCandidat = e.target.parentElement.parentElement.id;
     newNomCandidat.value = mofifierCandidat.nom;
@@ -91,7 +102,7 @@ update.addEventListener("click", () => {
     numero: newNumeroCandidat.value,
     id: idCandidat,
   };
-  const newCandidat = candidats.map((candidat) => {
+  const newCandidat = candidats.map(candidat => {
     if (candidat.id == modifiedCandidats.id) {
       candidat = modifiedCandidats;
     }
@@ -109,7 +120,9 @@ function myFunction() {
 }
 function suprimerCandidat() {
   const candidats = JSON.parse(localStorage.getItem("tableau_candidats"));
-  const filteredCandidats = candidats.filter((candidatObj) => candidatObj.id != idCandidat2);
+  const filteredCandidats = candidats.filter(
+    candidatObj => candidatObj.id != idCandidat2
+  );
   localStorage.setItem("tableau_candidats", JSON.stringify(filteredCandidats));
   tbody.deleteRow(index);
 }
@@ -121,5 +134,6 @@ function LOGOUT() {
 
 function bonjourUtilisateur() {
   const user = JSON.parse(localStorage.getItem("user"));
-  document.getElementById("BJ").innerHTML = "Bienvenue chez notre platforme : <br>" + user.nomEtablissament;
+  document.getElementById("BJ").innerHTML =
+    "Bienvenue chez notre platforme : <br>" + user.nomEtablissament;
 }
