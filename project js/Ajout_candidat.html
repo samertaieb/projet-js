@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <link rel="stylesheet" href="PageAdmin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -101,10 +105,11 @@
                   href="PageAdmin.html"
                   aria-expanded="false"
                 >
-                  <i class="mdi mdi-account-network"></i>
+                  <i class="fas fa-home"></i>
                   <span class="hide-menu">Acceuil</span>
                 </a>
               </li>
+              <br />
               <li class="sidebar-item">
                 <a
                   href="Ajout_candidat.html"
@@ -112,10 +117,11 @@
                   href=""
                   aria-expanded="false"
                 >
-                  <i class="mdi mdi-account-network"></i>
+                  <i class="fas fa-user-plus"></i>
                   <span class="hide-menu">Ajouter un candidat</span>
                 </a>
               </li>
+              <br />
               <li class="sidebar-item">
                 <a
                   href="Liste_candidats.html"
@@ -123,17 +129,18 @@
                   href=""
                   aria-expanded="false"
                 >
-                  <i class="mdi mdi-av-timer"></i>
+                  <i class="fas fa-list"></i>
                   <span class="hide-menu">Liste des candidats</span>
                 </a>
               </li>
+              <br />
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
                   href="donnéesEntreprise.html"
                   aria-expanded="false"
                 >
-                  <i class="mdi mdi-account-network"></i>
+                  <i class="fas fa-user"></i>
                   <span class="hide-menu">Profile de l'entreprise</span>
                 </a>
               </li>
@@ -183,7 +190,9 @@
 
     <div class="card" style="width: 50rem" id="formCandidat">
       <form style="margin-top: 90px">
-        <center><h1 id="titre_page_candidats">Ajout d'un nouveau candidat :</h1></center>
+        <center>
+          <h1 id="titre_page_candidats" style="color: darkblue">Ajout d'un nouveau candidat :</h1>
+        </center>
         <br />
         <div class="input-group mb-3">
           <div class="input-group-prepend">
